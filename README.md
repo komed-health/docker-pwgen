@@ -22,10 +22,3 @@ Example to generate a 20 character long password in terminal:
 ```
 $ docker run komed/pwgen 20
 ```
-
-# How to do releases
-
-- Tag new version like `v1.0.0`
-- This will trigger a new build at https://hub.docker.com/repository/docker/komed/pwgen
-- After build is finished re-tag the new version to docker image `latest` -> `docker tag komed/pwgen:version-1.0.0 komed/pwgen:latest`
-- Push latest docker image: `docker push komed/pwgen:latest`
