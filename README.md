@@ -16,3 +16,9 @@ declare PW=$($PWGEN_CMD 20)
 
 echo $PW
 ```
+
+
+Example to generate a 20 character long password in terminal:
+```
+$ docker run komed/pwgen 20
+```
