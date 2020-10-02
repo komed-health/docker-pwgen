@@ -1,6 +1,6 @@
 # docker-pwgen
 
-This is a secure container to run (pwgen)[https://linux.die.net/man/1/pwgen]. We created our own in order to be able to control the contents, since we use this for security-sensitive purposes.
+This is a secure container to run (https://linux.die.net/man/1/pwgen)[pwgen]. We created our own in order to be able to control the contents, since we use this for security-sensitive purposes.
 
 The container will check to make sure that a good source of entropy is available to the container, and exit with an error otherwise.
 
