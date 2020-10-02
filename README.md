@@ -32,6 +32,7 @@ echo $PW
 
 This is our process to release a new version:
 
-1. Go to [the release page](https://github.com/komed-health/docker-pwgen/releases) and create a new release for your new version. Write down couple of sentences in the release description.
+1. Go to [the release page](https://github.com/komed-health/docker-pwgen/releases) and create a new release e.g. `1.0.0`.
+1. Write down couple of sentences in the release description.
 
 That's it 🎉
