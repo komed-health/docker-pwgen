@@ -13,11 +13,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Get the version
-        id: get_version
+        id: getVersion
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-
-      - run: echo "${{ steps.getVersion.outputs.VERSION }}"
 
       - run: docker build -t ghcr.io/komed-health/pwgen .
 
-      # - run: docker tag ghcr.io/komed-health/pwgen ghcr.io/komed-health/pwgen:d
+      - run: docker tag ghcr.io/komed-health/pwgen ghcr.io/komed-health/pwgen:${{ steps.getVersion.outputs.VERSION }}
