@@ -16,7 +16,7 @@ jobs:
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-      - run: echo ${{ steps.getVersion.outputs.VERSION }}
+      - run: echo "${{ steps.getVersion.outputs.VERSION }}"
 
       - run: docker build -t ghcr.io/komed-health/pwgen .
 
