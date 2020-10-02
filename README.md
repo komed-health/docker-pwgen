@@ -11,7 +11,7 @@ The container will check to make sure that a good source of entropy is available
 ## Generate a 20 character long password in terminal
 
 ```console
-$ docker run komed/pwgen 20
+$ docker run ghcr.io/komed-health/pwgen 20
 ```
 
 <br/>
@@ -21,7 +21,7 @@ $ docker run komed/pwgen 20
 ```sh
 #/bin/bash
 
-declare PWGEN_CMD="docker run komed/pwgen"
+declare PWGEN_CMD="docker run ghcr.io/komed-health/pwgen"
 
 declare PW=$($PWGEN_CMD 20)
 
