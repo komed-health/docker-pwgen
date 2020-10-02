@@ -25,3 +25,13 @@ declare PW=$($PWGEN_CMD 20)
 
 echo $PW
 ```
+
+# Release new version
+
+❗️This project follows [Semantic Versioning](https://semver.org/)❗️
+
+This is our process to release a new version:
+
+1. Go to [the release page](https://github.com/komed-health/docker-pwgen/releases) and create a new release for your new version. Write down couple of sentences in the release description.
+
+That's it 🎉
