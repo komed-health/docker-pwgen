@@ -1,3 +1,5 @@
+![release](https://github.com/komed-health/docker-pwgen/workflows/release/badge.svg)
+
 # docker-pwgen
 
 This is a secure container to run [pwgen](https://linux.die.net/man/1/pwgen). We created our own in order to be able to control the contents, since we use this for security-sensitive purposes.
