@@ -11,4 +11,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: echo 'asdf'
+
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+
+      - run: echo ${{ steps.getVersion.outputs.VERSION }}
+
+      - run: docker build -t ghcr.io/komed-health/pwgen .
+
+      # - run: docker tag ghcr.io/komed-health/pwgen ghcr.io/komed-health/pwgen:d
