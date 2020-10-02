@@ -6,7 +6,16 @@ The container will check to make sure that a good source of entropy is available
 
 # Usages
 
-Bash script example to generate a 20 character long password:
+## Generate a 20 character long password in terminal
+
+```console
+$ docker run komed/pwgen 20
+```
+
+<br/>
+
+## Bash script to generate a 20 character long password
+
 ```sh
 #/bin/bash
 
@@ -15,10 +24,4 @@ declare PWGEN_CMD="docker run komed/pwgen"
 declare PW=$($PWGEN_CMD 20)
 
 echo $PW
-```
-
-
-Example to generate a 20 character long password in terminal:
-```
-$ docker run komed/pwgen 20
 ```
