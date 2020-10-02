@@ -12,10 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Get the version
+      - name: Save tag version for re-usage later on
         id: getVersion
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
       - run: docker build -t ghcr.io/komed-health/pwgen .
 
       - run: docker tag ghcr.io/komed-health/pwgen ghcr.io/komed-health/pwgen:${{ steps.getVersion.outputs.VERSION }}
+
+      - name: Login to GitHub Cloud Registry
+        run: echo ${{ secrets.ORG_GITHUB_CONTAINER_REGISTRY_TOKEN }} | docker login ghcr.io -u BorntraegerMarc --password-stdin
+
+      - run: docker push ghcr.io/komed-health/pwgen
+      - run: docker push ghcr.io/komed-health/pwgen:${{ steps.getVersion.outputs.VERSION }}
